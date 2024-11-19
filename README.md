@@ -1,11 +1,31 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Chapter 4: State
 
 ## GitHub Pages
 Link hasil deployment: [React State](https://fatahpratam.github.io/tutorial-react-state/)
+
+## Mempelajari lebih lanjut tentang jsx
+- Variable Injection -> Caranya dengan membuat kurung kurawal {}
+
+- Dapat menambah event listener langsung di jsx seperti HTML biasa.
+
+## Apa itu state
+- Objek React bawaan yang digunakan untuk menampung data atau informasi tentang komponen.
+- State dari suatu komponen dapat berubah seiring waktu dan ketika nilai state berubah, maka komponen akan dirender ulang.
+
+## Cara menggunakan state
+- Panggil method useState dengan nilai yang ingin di simpan.
+- Destructure array yang dikembalikan oleh useState dengan pola ['Nama variabel', 'Nama fungsi pengubah' ];
+- Untuk mendapatkan nilai variabel cukup memanggil 'Nama variabel'.
+- Untuk mengubah nilai variabel cukup memanggil 'Nama fungsi pengubah'.
+
+## Batching
+- Strategi pengelompokan beberapa pembaruan state sebelum memicu render ulang komponen.
+- Optimalisasi ini sangat penting karena setiap render ulang dapat menjadi mahal secara komputasi, terutama pada komponen yang kompleks dengan pohon DOM virtual yang besar.
+- Karena batching, salah satu setCounter aja yang akan dijalankan:
+const [counter, setCounter] = useState(15);
+setCounter(counter + 1);
+setCounter(counter + 1);
+
+- Untuk mengatasinya, gunakanlah callback:
+setCounter(prevCounter => prevCounter + 1);
+setCounter(prevCounter => prevCounter + 1);
