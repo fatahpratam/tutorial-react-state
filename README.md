@@ -3,6 +3,10 @@
 ## GitHub Pages
 Link hasil deployment: [React State](https://fatahpratam.github.io/tutorial-react-state/)
 
+## Youtube Tutorial
+- Link: [Full Stack React Developer Course with Appwrite](https://www.youtube.com/watch?v=Bvwq_S0n2pk)
+- Creator: [HiteshCodeLab](https://www.youtube.com/@HiteshCodeLab)
+
 ## Mempelajari lebih lanjut tentang jsx
 - Variable Injection -> Caranya dengan membuat kurung kurawal {}
 
